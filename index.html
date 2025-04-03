@@ -20,7 +20,6 @@
       color: #333; 
       scroll-behavior: smooth; 
       overflow-x: hidden; 
-      /* Отступ снизу, чтобы контент футера не перекрывался плавающими элементами */
       padding-bottom: 80px;
     }
     h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
@@ -44,7 +43,6 @@
     }
     .navbar-nav .nav-link:hover { color: var(--primary-color); }
     .lang-switcher { margin-left: 1rem; }
-    /* Уменьшаем высоту hero с учётом фиксированного navbar (56px) */
     #hero { 
       position: relative; 
       height: calc(100vh - 56px);
@@ -103,7 +101,7 @@
       padding: 20px 0; 
       font-size: 0.9rem;
       position: relative;
-      z-index: 1100; /* отображается поверх плавающих элементов */
+      z-index: 1100;
     }
     footer a { color: var(--accent-color); text-decoration: underline; }
     .floating-button {
@@ -200,7 +198,6 @@
       padding: 5px 10px;
     }
 
-    /* Медиа-запросы для адаптивности */
     @media (max-width: 768px) {
       .navbar-nav { text-align: center; }
       .navbar-nav .nav-link { font-size: 0.9rem; padding: 10px; }
@@ -244,7 +241,6 @@
         padding-right: 1rem;
       }
     }
-    
   </style>
 </head>
 <body>
@@ -319,6 +315,24 @@
           <h4 data-translate-key="about_item_4_title">פורמט גמיש</h4>
           <p data-translate-key="about_item_4_desc">שיעורים אונליין בזמן הנוח לכם עם אפשרות לצפייה חוזרת.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="intro-video" data-aos="fade-up">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 data-translate-key="video_title" class="section-title">וידאו מבוא לקורס</h2>
+        <p data-translate-key="video_description" class="section-description">
+          צפו בסרטון קצר הנותן טעימה מהקורס ונותן דוגמא פשוטה שמציגה את היתרונות שלו לעסק שלכם.
+        </p>
+      </div>
+      <div class="ratio ratio-16x9" style="max-width: 800px; margin: 0 auto;">
+        <iframe src="https://www.youtube.com/embed/qszFKTh7Hzk" 
+                title="SmartBizLab Intro Video" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -574,6 +588,8 @@
         about_item_3_desc: "Индивидуальная поддержка эксперта на каждом этапе обучения.",
         about_item_4_title: "Гибкий формат",
         about_item_4_desc: "Онлайн-занятия в удобное для вас время с возможностью пересмотра уроков.",
+        video_title: "Вводное видео курса",
+        video_description: "Посмотрите короткое видео, представляющее основные моменты курса и его преимущества для вашего бизнеса.",
         program_title: "Программа курса",
         program_description: "Пошаговое обучение с 6 модулями.",
         module_1_title: "Модуль 1: Использование генеративных ИИ через веб-интерфейс",
@@ -601,10 +617,9 @@
         pricing_description: "Занятия стоят 1200 шек за каждый модуль. За все 6 модулей – 6000 шек. Если оплата производится по модулям, можно прекратить обучение после любого модуля, но возобновить, пропустив модуль или более, нельзя. Обучение проходит только подряд.",
         pricing_price: "Стоимость курса: 6000 шекелей",
         pricing_cta: "Записаться на курс",
-        pricing_bonus: "Бонус: Бесплатный вводный урок для ознакомления с программой.",
         contact_title: "Записаться на курс",
         contact_whatsapp: "Связаться через WhatsApp",
-        footer_text: "© SmartBizLab 2025. Все права защищены.",
+        footer_text: "©A SmartBizLab 2025. Все права защищены.",
         video_fallback: "Ваш браузер не поддерживает HTML5 видео.",
         chat_header: "Чат с ИИ",
         chat_welcome: "Добро пожаловать в чат с ИИ! Задайте свой вопрос ниже.",
@@ -633,6 +648,8 @@
         about_item_3_desc: "Individual expert guidance at every stage.",
         about_item_4_title: "Flexible Format",
         about_item_4_desc: "Online sessions at your convenience with replays available.",
+        video_title: "Course Intro Video",
+        video_description: "Watch a short video showcasing the course highlights and its benefits for your business.",
         program_title: "Course Program",
         program_description: "Step-by-step training with 6 modules.",
         module_1_title: "Module 1: Using Generative AI via Web Interfaces",
@@ -660,7 +677,6 @@
         pricing_description: "Each module costs 1200 shekels. For all 6 modules – 6000 shekels. If you pay per module, you may stop after any module, but you cannot resume if you skip one or more modules; the course must be taken consecutively.",
         pricing_price: "Course Price: 6000 shekels",
         pricing_cta: "Sign Up for the Course",
-        pricing_bonus: "Bonus: Free introductory lesson to get acquainted with the program.",
         contact_title: "Sign Up",
         contact_whatsapp: "Contact via WhatsApp",
         footer_text: "© SmartBizLab 2025. All rights reserved.",
@@ -692,6 +708,8 @@
         about_item_3_desc: "ליווי מומחה אישי בכל שלב.",
         about_item_4_title: "פורמט גמיש",
         about_item_4_desc: "שיעורים אונליין בזמן הנוח לכם עם אפשרות לצפייה חוזרת.",
+        video_title: "וידאו מבוא לקורס",
+        video_description: "צפו בסרטון קצר הנותן טעימה מהקורס ונותן דוגמא פשוטה שמציגה את היתרונות שלו לעסק שלכם.",
         program_title: "תכנית הקורס",
         program_description: "הכשרה שלב אחר שלב עם 6 מודולים.",
         module_1_title: "מודול 1: שימוש בבינה מלאכותית גנרטיבית דרך ממשקי רשת",
@@ -719,7 +737,6 @@
         pricing_description: "השיעורים עולים 1200 שקל לכל מודול. עבור 6 מודולים – 6000 שקל. אם משלמים לפי מודול, אפשר להפסיק לאחר כל מודול, אך לא ניתן להמשיך אם מפסיקים מודול אחד או יותר – הלימודים חייבים להיעשות ברצף.",
         pricing_price: "מחיר הקורס: 6000 שקל",
         pricing_cta: "להרשמה לקורס",
-        pricing_bonus: "בונוס: שיעור היכרות חינמי להיכרות עם התכנית.",
         contact_title: "להרשמה / קבלת ייעוץ חינמי",
         contact_whatsapp: "צור קשר דרך WhatsApp",
         footer_text: "© SmartBizLab 2025. כל הזכויות שמורות.",
@@ -755,5 +772,5 @@
       setLanguage("he");
     });
   </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92a7e9d6ec1eada4',t:'MTc0MzY3NjQ2Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
